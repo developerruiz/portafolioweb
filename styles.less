@@ -1,0 +1,526 @@
+@fondo: #121212;
+@color-naranja: #ff5137;
+@color-letra: #fff;
+
+
+* {
+    margin: 0;
+    top: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    font-size: 14px;
+    color: @color-letra;
+    font-family: 'Roboto Condensed', sans-serif;
+
+    &::selection {
+        background: @color-naranja ;
+        color: @color-letra;
+    }
+}
+
+body {
+    background: @fondo;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+main {
+    margin: 0 auto;
+    max-width: 1500px;
+    width: 100%;
+    
+
+    nav {
+        
+        display: flex;
+        justify-content: space-between;
+        padding: 0 40px;
+        align-items: center;
+        height: 80px;
+
+        .logo{
+            
+            display: flex;
+        }
+        .menu{
+            display: flex;
+            flex-wrap: wrap;
+            
+            li{
+                list-style: none;
+                padding: 0 20px;
+                a{
+                    text-decoration: none;
+                    color: @color-letra;
+                }
+            }
+        }
+        .burger-menu{
+            z-index: 999999999;
+            a{
+                i{
+                    
+                    font-size: 20px;
+                }
+            }
+            display: none;
+        }
+    }
+
+.menu-movil{
+    width: 250%;
+    height: 200%;
+    position: absolute;
+    background: fade(@color-naranja, 100);
+    border-radius: 50%;
+    left: -200%;
+    top: -200%;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: all .3s ease-in;
+        -webkit-transition: all .3s ease-in;
+        -o-transition: all .3s ease-in;
+        position: fixed;
+        
+        li{
+            margin: 25px 0;
+            list-style: none;
+            a{
+                text-decoration: none;
+                color: @color-letra;
+            }
+        }
+    
+    &.active{
+        left: -75%;
+        top: -45%;
+        transition: all .3s ease-in;
+        -webkit-transition: all .3s ease-in;
+        -o-transition: all .3s ease-in;
+    }
+}
+
+    section {
+        .portada {
+            width: 100%;
+            height: 600px;
+            display: flex;
+            
+            
+
+            .nombre-izq {
+                position: absolute;
+                left: 0;
+                height: 600px;
+                justify-content: center;
+                display: flex;
+                align-items: center;
+                writing-mode: vertical-lr;
+                transform: rotate(180deg);
+                width: 60px;
+                justify-content: center;
+                
+
+                h5 {
+                    font-size: 10px;
+                    margin-top: 20px;
+                    letter-spacing: 8px;
+                }
+
+                hr {
+                    color: @color-letra;
+                    width: 2px;
+                    height: 100px;
+                    background: @color-letra;
+                }
+
+                .redes-izq {
+                    display: block;
+                    writing-mode: vertical-lr;
+                    transform: rotate(180deg);
+                    height: auto;
+
+                    i {
+                        font-size: 30px;
+                        margin: 10px 0;
+                    }
+                }
+            }
+
+            .nombre-ivan {
+                width: 400px;
+                position: absolute;
+                top: 25%;
+                left: 10%;
+                
+
+                // transform: translate(-25%,-10%);
+                h1 {
+                    font-size: 50px;
+                    color: @color-naranja;
+                    letter-spacing: 1.5rem;
+                    font-family: 'Roboto Condensed', sans-serif;
+                    font-weight: 600;
+                    // animation: parpadeo 1s infinite linear;
+                }
+
+                h2 {
+                    font-size: 40px;
+                    font-family: 'Roboto Condensed', sans-serif;
+                    letter-spacing: .23rem;
+
+                }
+
+                .boton a {
+                    text-decoration: none;
+                    color: @color-letra;
+                    border: 2px solid #ff5137;
+                    text-align: center;
+                    border-radius: 25px;
+                    padding: 10px 30px;
+                    -webkit-transition: .3s ease-in;
+                    -o-transition: .3s ease-in;
+                    transition: .3s ease-in;
+
+                    &:hover {
+                        background: @color-naranja;
+                        color: @color-letra;
+                        -webkit-transition: .3s ease-in;
+                        -o-transition: .3s ease-in;
+                        transition: .3s ease-in;
+                    }
+                }
+            }
+
+            .imagen-portada {
+                overflow: hidden;
+                position: absolute;
+                left: 50%;
+                animation: desvancer 2s;
+                width: 500px;
+                height: auto;
+                display: block;
+                
+
+                & img {
+                    width: 100%;
+                    height: auto;
+                    overflow: hidden;
+                }
+            }
+
+            .fecha {
+                overflow: hidden;
+                width: 60px;
+                position: absolute !important;
+                top: 0;
+                display: flex !important;
+                writing-mode: vertical-lr !important;
+                transform: rotate(180deg);
+                left: 95%;
+                height: 600px;
+                justify-content: center;
+                align-items: center;
+
+                p {
+                    color: #fff;
+
+                }
+            }
+
+            .numero-button {
+                width: 100px;
+                position: absolute;
+                left: 75%;
+                top: 65%;
+
+                span {
+                    color: @color-naranja;
+                    font-size: 9rem !important;
+                    font-weight: 600;
+                }
+
+                p {
+                    font-size: 9rem !important;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
+    section {
+        .perfil {
+            margin-top: 250px;
+
+            .img-izq {
+                margin: 0 auto;
+
+                .ivan-frente {
+                    z-index: 99;
+                    width: 100%;
+                    height: 100%;
+
+                    display: flex;
+                    justify-content: center;
+
+                    img {
+                        width: 400px;
+                        height: 100%;
+
+                    }
+                }
+
+                .elipse-detras {
+                    margin-top: -50px;
+                    position: absolute;
+                    width: 100%;
+                    height: auto;
+
+                    display: flex;
+                    justify-content: center;
+
+                    img {
+                        width: 400px;
+                        height: auto;
+                    }
+                }
+
+                .elipse-arriba {
+                    margin-top: -100px;
+                    position: absolute;
+                    width: 100%;
+                    height: auto;
+                    left: 10%;
+
+
+
+                    img {
+                        width: 50px;
+                        height: auto;
+                    }
+                }
+            }
+
+            .text-der {
+                margin-top: -30px !important;
+
+                .titulo {
+                    h2 {
+                        font-size: 35px;
+                        font-family: 'Roboto Condensed', sans-serif;
+                        font-weight: 600;
+                    }
+                }
+
+                p {
+                    font-size: 18px;
+                    text-align: justify;
+
+                }
+
+                .elipse-debajo {
+
+
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    justify-content: flex-end;
+                    margin-left: -100px;
+
+
+
+                    img {
+                        width: 30px;
+                        height: auto;
+                    }
+                }
+
+                .L-debajo {
+                    width: 100px;
+                    height: 100%;
+                    position: absolute;
+                    top: 70%;
+
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+
+    .habilidades {
+        .titulo {
+            margin: 80px 0 !important;
+
+            h2 {
+                font-weight: 600;
+            }
+        }
+
+        .contenedor-habilidades {
+            .habilidad-img-txt {
+                .img-habilidades {
+                    margin: 0 auto;
+                    width: 180px;
+                    height: 180px;
+                    border: 8px solid @color-naranja;
+                    border-radius: 100%;
+
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+        }
+
+        .cont-mashabilidades {
+            .habilidad {
+
+                .cont-izq,
+                .cont-der {
+                    .linea-punteada {
+                        width: 50%;
+                        height: 14px;
+
+                        border-bottom: 4px dashed @color-naranja;
+                    }
+
+                    p {
+                        width: 50%;
+                    }
+                }
+            }
+        }
+    }
+
+    // .aptitudes{
+
+    // }
+}
+// @media all and (max-width:1152px){
+//   .portada{
+ 
+// }
+@media all and (max-width:768px){
+    main section .portada{
+        height: 750px!important;
+    }
+    main section .portada .fecha{
+        display: none!important;
+    }
+    .burger-menu{
+        display: block!important;
+    }
+    .menu{
+        display:none!important;
+    }
+    main section .portada .imagen-portada{
+        
+        width: 100%!important;
+        top: 5%;
+        left: 0;
+        text-align: center;
+
+        & img{
+            display: block;
+        margin: 0 auto;
+            width: 50%;
+            height: auto;
+        }
+    }
+    main section .portada .nombre-izq{
+                align-items: flex-end;
+                writing-mode: horizontal-tb!important;
+                transform: rotate(0);
+                width: 100%;
+                top: 15%;
+                position: absolute;
+
+                .redes-izq{
+                    display: block;
+                    writing-mode: horizontal-tb;
+                    transform: rotate(0);
+                    
+                    a{
+                        margin: 0 20px;
+                    }
+                }
+                hr{
+                    display: none;
+                }
+                .orange-select{
+                    display: none;
+                    
+
+                }
+                
+    }
+    main section .portada .numero-button{
+        display: none!important;
+    }
+    main section .portada .nombre-ivan{
+        width: 100%;
+        margin-top: 70%;
+        position: initial;
+        text-align: center;
+
+        h1{
+            font-size: 20px;
+        }
+        h2{
+            font-size: 18px;
+        }
+    }
+    main section .portada .nombre-ivan h1{
+        margin-left: 1.25rem;
+    }
+    .ivan-frente, .elipse-detras, .elipse-arriba{
+        display: none!important;
+    }
+    main section .perfil{
+        margin-top: 150px!important;
+    }
+    main section .perfil .text-der .L-debajo{
+        display: none!important;
+    }
+}
+
+
+@keyframes parpadeo {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes desvancer {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
