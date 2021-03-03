@@ -37,88 +37,103 @@ main {
     margin: 0 auto;
     max-width: 1500px;
     width: 100%;
-    
+
 
     nav {
-        
+
         display: flex;
         justify-content: space-between;
         padding: 0 40px;
         align-items: center;
         height: 80px;
 
-        .logo{
-            
+        .logo {
+
             display: flex;
         }
-        .menu{
+
+        .menu {
             display: flex;
             flex-wrap: wrap;
-            
-            li{
+
+            li {
                 list-style: none;
                 padding: 0 20px;
-                a{
+
+                a {
                     text-decoration: none;
                     color: @color-letra;
+                    &:hover{
+                        color: @color-naranja;
+                        transition: all .3s ease-in;
+                        -webkit-transition: all .3s ease-in;
+                        -o-transition: all .3s ease-in;
+                    }
                 }
             }
         }
-        .burger-menu{
+
+        .burger-menu {
             z-index: 999999999;
-            a{
-                i{
-                    
+            transition: all .3s ease-in;
+            -webkit-transition: all .3s ease-in;
+            -o-transition: all .3s ease-in;
+
+            a {
+                i {
+
                     font-size: 20px;
+                    transform: rotate(180deg);
+                    transition: all .3s ease-in;
+                    -webkit-transition: all .3s ease-in;
+                    -o-transition: all .3s ease-in;
                 }
             }
+
             display: none;
         }
     }
 
-.menu-movil{
-    width: 250%;
-    height: 200%;
-    position: absolute;
-    background: fade(@color-naranja, 100);
-    border-radius: 50%;
-    left: -200%;
-    top: -200%;
-    z-index: 99;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    transition: all .3s ease-in;
+    .menu-movil {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: @color-naranja;
+        z-index: 99;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        transition: all .3s ease-in;
         -webkit-transition: all .3s ease-in;
         -o-transition: all .3s ease-in;
         position: fixed;
-        
-        li{
+        clip-path: circle(0.0% at 0 0);
+
+        li {
             margin: 25px 0;
             list-style: none;
-            a{
+
+            a {
                 text-decoration: none;
                 color: @color-letra;
             }
         }
-    
-    &.active{
-        left: -75%;
-        top: -45%;
-        transition: all .3s ease-in;
-        -webkit-transition: all .3s ease-in;
-        -o-transition: all .3s ease-in;
+
+        &.active {
+            clip-path: circle(150% at 0 0);
+            transition: all .3s ease-in;
+            -webkit-transition: all .3s ease-in;
+            -o-transition: all .3s ease-in;
+
+        }
     }
-}
 
     section {
         .portada {
             width: 100%;
             height: 600px;
             display: flex;
-            
-            
 
             .nombre-izq {
                 position: absolute;
@@ -131,7 +146,7 @@ main {
                 transform: rotate(180deg);
                 width: 60px;
                 justify-content: center;
-                
+
 
                 h5 {
                     font-size: 10px;
@@ -142,7 +157,7 @@ main {
                 hr {
                     color: @color-letra;
                     width: 2px;
-                    height: 100px;
+                    height: 80px;
                     background: @color-letra;
                 }
 
@@ -153,8 +168,19 @@ main {
                     height: auto;
 
                     i {
-                        font-size: 30px;
+
+                        font-size: 22px;
                         margin: 10px 0;
+                        transition: all .3s ease-in;
+                        -webkit-transition: all .3s ease-in;
+                        -o-transition: all .3s ease-in;
+
+                        &:hover{
+                            color: @color-naranja;
+                            transition: all .3s ease-in;
+                            -webkit-transition: all .3s ease-in;
+                            -o-transition: all .3s ease-in;
+                        }
                     }
                 }
             }
@@ -164,7 +190,7 @@ main {
                 position: absolute;
                 top: 25%;
                 left: 10%;
-                
+
 
                 // transform: translate(-25%,-10%);
                 h1 {
@@ -212,7 +238,7 @@ main {
                 width: 500px;
                 height: auto;
                 display: block;
-                
+
 
                 & img {
                     width: 100%;
@@ -236,12 +262,12 @@ main {
 
                 p {
                     color: #fff;
-
+                    font-size: 1.5em;
                 }
             }
 
             .numero-button {
-                width: 100px;
+                width: 80px;
                 position: absolute;
                 left: 75%;
                 top: 65%;
@@ -412,91 +438,108 @@ main {
 
     // }
 }
+
 // @media all and (max-width:1152px){
 //   .portada{
- 
+
 // }
-@media all and (max-width:768px){
-    main section .portada{
-        height: 750px!important;
+@media all and (max-width:768px) {
+    main section .portada {
+        height: 750px !important;
     }
-    main section .portada .fecha{
-        display: none!important;
+
+    main section .portada .fecha {
+        display: none !important;
     }
-    .burger-menu{
-        display: block!important;
+
+    .burger-menu {
+        display: block !important;
     }
-    .menu{
-        display:none!important;
+
+    .menu {
+        display: none !important;
     }
-    main section .portada .imagen-portada{
-        
-        width: 100%!important;
-        top: 5%;
-        left: 0;
+
+    main section .portada .imagen-portada {
+        width: 100% !important;
+        top: 20px;
+        left: 10px;
         text-align: center;
 
-        & img{
+        & img {
             display: block;
-        margin: 0 auto;
+            margin: 0 auto;
             width: 50%;
             height: auto;
         }
     }
-    main section .portada .nombre-izq{
-                align-items: flex-end;
-                writing-mode: horizontal-tb!important;
-                transform: rotate(0);
-                width: 100%;
-                top: 15%;
-                position: absolute;
 
-                .redes-izq{
-                    display: block;
-                    writing-mode: horizontal-tb;
-                    transform: rotate(0);
-                    
-                    a{
-                        margin: 0 20px;
-                    }
-                }
-                hr{
-                    display: none;
-                }
-                .orange-select{
-                    display: none;
-                    
+    main section .portada .nombre-izq {
+        align-items: flex-end;
+        writing-mode: horizontal-tb !important;
+        transform: rotate(0);
+        width: 100%;
+        top: 45%;
+        height: 100px;
+        position: absolute;
 
+        .redes-izq {
+            display: block;
+            writing-mode: horizontal-tb;
+            transform: rotate(0);
+
+            a {
+                margin: 0 20px;
+                i{
+                    font-size: 18px;
                 }
-                
+            }
+        }
+
+        hr {
+            display: none;
+        }
+
+        .orange-select {
+            display: none;
+        }
     }
-    main section .portada .numero-button{
-        display: none!important;
+
+    main section .portada .numero-button {
+        display: none !important;
     }
-    main section .portada .nombre-ivan{
+
+    main section .portada .nombre-ivan {
         width: 100%;
         margin-top: 70%;
         position: initial;
         text-align: center;
 
-        h1{
+        h1 {
             font-size: 20px;
         }
-        h2{
+
+        h2 {
             font-size: 18px;
         }
     }
-    main section .portada .nombre-ivan h1{
+
+    main section .portada .nombre-ivan h1 {
         margin-left: 1.25rem;
     }
-    .ivan-frente, .elipse-detras, .elipse-arriba{
-        display: none!important;
+
+    .ivan-frente,
+    .elipse-detras,
+    .elipse-arriba {
+        display: none !important;
     }
-    main section .perfil{
-        margin-top: 150px!important;
+
+    main section .perfil {
+        margin-top: 40px !important;
     }
-    main section .perfil .text-der .L-debajo{
-        display: none!important;
+
+    main section .perfil .text-der .L-debajo {
+        display: none !important;
     }
 }
 
