@@ -17,41 +17,41 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap"
         rel="stylesheet">
-       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
-        
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
 </head>
 
 <body>
     <main>
         <!-- INICIO DE MENU -->
-        
-            <nav class="d-flex align-items-center my-4">    
-                <div class="logo">
-                   <a href="index.html"> <img src="images/logo.png" alt="logo Ivan Ruiz" width="50px"></a>
-                </div>
-                <div class="menu">
-                    <li class="active"><a href="#">INICIO</a></li>
-                    <li><a href="#">HABILIDADES</a></li>
-                    <li><a href="#">APTITUDES</a></li>
-                    <li><a href="#">CONTACTO</a></li>
-                </div>
-                <div class="burger-menu" id="burger_menu">
-                    <a href="#menu-movil">
-                        <i class="fas fa-bars"></i> 
-                    </a>
-                </div>
-            </nav>
-        
-        <!-- FIN MENU -->
 
-
-        <!-- MENU MOVIL -->
-            <div class="menu-movil" id="menu_movil">
+        <nav class="d-flex align-items-center my-4" id="main-menu">
+            <div class="logo">
+                <a href="index.html"> <img src="images/logo.png" alt="logo Ivan Ruiz" width="50px"></a>
+            </div>
+            <div class="menu">
                 <li class="active"><a href="#">INICIO</a></li>
                 <li><a href="#">HABILIDADES</a></li>
                 <li><a href="#">APTITUDES</a></li>
                 <li><a href="#">CONTACTO</a></li>
             </div>
+            <div class="burger-menu" id="burger_menu">
+                <a href="#menu-movil">
+                    <i class="fas fa-bars"></i>
+                </a>
+            </div>
+        </nav>
+
+        <!-- FIN MENU -->
+
+
+        <!-- MENU MOVIL -->
+        <div class="menu-movil" id="menu_movil">
+            <li class="active"><a href="#">INICIO</a></li>
+            <li><a href="#">HABILIDADES</a></li>
+            <li><a href="#">APTITUDES</a></li>
+            <li><a href="#">CONTACTO</a></li>
+        </div>
         <!-- FIN MENU MOVIL -->
 
 
@@ -59,7 +59,7 @@
         <section>
             <div class="portada">
                 <div class="col-12">
-                    <div class="">
+                    <div class="count-portada">
                         <div class="nombre-izq">
                             <div class="redes-izq">
                                 <a href="#"><i class="fab fa-facebook"></i></a>
@@ -89,7 +89,7 @@
                             <p>MARZO 1995</p>
                             </br>
                         </div>
-                     
+
                     </div>
                 </div>
             </div>
@@ -150,7 +150,7 @@
 
 
                     <div class="contenedor-habilidades d-flex flex-wrap my-5">
-                        <div class="habilidad-img-txt col-lg-3">
+                        <div class="habilidad-img-txt col-lg-3 col-md-6">
                             <div class="img-habilidades d-flex justify-content-center">
                                 <img src="images/imagen_html5.png" alt="" width="60%">
                             </div>
@@ -166,7 +166,7 @@
                                 unde maiores. Ad consectetur quasi aliquid.
                             </p>
                         </div>
-                        <div class="habilidad-img-txt col-lg-3">
+                        <div class="habilidad-img-txt col-lg-3 col-md-6">
                             <div class="img-habilidades d-flex justify-content-center">
                                 <img src="images/imagen_html5.png" alt="" width="60%">
                             </div>
@@ -182,7 +182,7 @@
                                 unde maiores. Ad consectetur quasi aliquid.
                             </p>
                         </div>
-                        <div class="habilidad-img-txt col-lg-3">
+                        <div class="habilidad-img-txt col-lg-3 col-md-6">
                             <div class="img-habilidades d-flex justify-content-center">
                                 <img src="images/imagen_html5.png" alt="" width="60%">
                             </div>
@@ -198,7 +198,7 @@
                                 unde maiores. Ad consectetur quasi aliquid.
                             </p>
                         </div>
-                        <div class="habilidad-img-txt col-lg-3">
+                        <div class="habilidad-img-txt col-lg-3 col-md-6">
                             <div class="img-habilidades d-flex justify-content-center">
                                 <img src="images/imagen_html5.png" alt="" width="60%">
                             </div>
@@ -267,68 +267,95 @@
         </section>
         <!-- FIN SECCION HABILIDADES -->
         <section class="aptitudes" id="aptitudes">
-            <div class="col-lg-12 my-5">
+            <div class="my-5">
                 <div class="titulo text-center">
                     <h2>APTITUDES</h2>
                 </div>
-                <div class="col-lg-12 d-flex flex-wrap">
+                <div class="col-lg-12 d-flex flex-wrap justify-content-around">
 
-                    <div class="cont-img-txt-ap col-lg-4 my-5">
-                        <div class="imagen-aptitud text-center  my-3">
-                            <i class="far fa-lightbulb"></i>
+                  <div class="cont-aptitud">
+                        <div
+                            class="cont-img-txt-ap m-1 d-flex align-items-center justify-content-center flex-direction-row flex-column p-5">
+                            <div class="imagen-aptitud text-center">
+                                <i class="far fa-lightbulb"></i>
+                            </div>
+                            <div class="aptitud text-center">
+                                <h5>CREATIVIDAD</h5>
+                            </div>
                         </div>
-                        <div class="aptitud text-center">
-                            <h5>CREATIVIDAD</h5>
+                        <div
+                            class="cont-img-txt-ap m-1 d-flex align-items-center justify-content-center flex-direction-row flex-column p-5">
+                            <div class="imagen-aptitud text-center">
+                                <i class="far fa-handshake"></i>
+                            </div>
+                            <div class="aptitud text-center">
+                                <h5>HONESTIDAD</h5>
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="cont-img-txt-ap col-lg-4 my-5">
-                        <div class="imagen-aptitud text-center  my-3">
-                            <i class="far fa-handshake"></i>
+                      
+                        <div
+                            class="cont-img-txt-ap m-1 d-flex align-items-center justify-content-center flex-direction-row flex-column p-5">
+                            <div class="imagen-aptitud text-center">
+                                <i class="far fa-lightbulb"></i>
+                            </div>
+                            <div class="aptitud text-center">
+                                <h5>PROACTIVIDAD</h5>
+                            </div>
                         </div>
-                        <div class="aptitud text-center">
-                            <h5>HONESTIDAD</h5>
+                      
+                  </div>
+                  <div class="cont-aptitud">
+                        <div
+                            class="cont-img-txt-ap m-1 d-flex align-items-center justify-content-center flex-direction-row flex-column p-5">
+                            <div class="imagen-aptitud text-center">
+                                <i class="fas fa-cubes"></i>
+                            </div>
+                            <div class="aptitud text-center">
+                                <h5>DISCIPLINA</h5>
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="cont-img-txt-ap col-lg-4 my-5">
-                        <div class="imagen-aptitud text-center  my-3">
-                            <i class="far fa-lightbulb"></i>
+                      
+                        <div
+                            class="cont-img-txt-ap m-1 d-flex align-items-center justify-content-center flex-direction-row flex-column p-5">
+                            <div class="imagen-aptitud text-center">
+                                <i class="fas fa-exchange-alt"></i>
+                            </div>
+                            <div class="aptitud text-center">
+                                <h5>ADAPTABILIDAD</h5>
+                            </div>
                         </div>
-                        <div class="aptitud text-center">
-                            <h5>PROACTIVIDAD</h5>
+                      
+                        <div
+                            class="cont-img-txt-ap m-1 d-flex align-items-center justify-content-center flex-direction-row flex-column">
+                            <div class="imagen-aptitud text-center  my-3">
+                                <i class="far fa-clock"></i>
+                            </div>
+                            <div class="aptitud text-center">
+                                <h5>GESTION DEL TIEMPO</h5>
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="cont-img-txt-ap col-lg-4 my-5">
-                        <div class="imagen-aptitud text-center  my-3">
-                            <i class="fas fa-cubes"></i>
-                        </div>
-                        <div class="aptitud text-center">
-                            <h5>DISCIPLINA</h5>
-                        </div>
-                    </div>
-
-                    <div class="cont-img-txt-ap col-lg-4 my-5">
-                        <div class="imagen-aptitud text-center  my-3">
-                            <i class="fas fa-exchange-alt"></i>
-                        </div>
-                        <div class="aptitud text-center">
-                            <h5>ADAPTABILIDAD</h5>
-                        </div>
-                    </div>
-
-                    <div class="cont-img-txt-ap col-lg-4 my-5">
-                        <div class="imagen-aptitud text-center  my-3">
-                            <i class="far fa-clock"></i>
-                        </div>
-                        <div class="aptitud text-center">
-                            <h5>GESTION DEL TIEMPO</h5>
-                        </div>
-                    </div>
+                  </div>
 
                 </div>
-            </div>
+                <!-- MODALES -->
+                <div class="ventana-modal" id="ventana_modal">
+                    <div class="cont-modal">
+                        <div class="img-modal"></div>
+                        <div class="txt-modal">
+                            <div class="titulo-modal">
+                                <h3>Lorem ipsum dolor sit.</h3>
+                            </div>
+                            <div class="text-modal">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ducimus numquam,
+                                eveniet accusamus ut laborum, quos provident nam qui nostrum sit vitae consequuntur
+                                obcaecati itaque fugit modi, necessitatibus velit aliquid? Possimus ut sequi impedit
+                                distinctio ab obcaecati placeat laboriosam magni?
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div> 
         </section>
 
     </main>
