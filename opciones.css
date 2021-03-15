@@ -18,8 +18,6 @@ html,
 body {
   height: 100%;
   width: 100%;
-  margin: 0;
-  padding: 0;
   overflow: hidden;
 }
 a{
@@ -79,6 +77,13 @@ a:hover{
     background-color: #d1452f!important;
     border-color: #d1452f!important;
 }
+
+.img-perfil img{
+    border-radius: 50%;
+    border: 5px solid #ff5137;
+    margin: 20px 0;
+
+}
 footer{
     
     position: absolute;
@@ -93,4 +98,10 @@ footer{
     text-align: center;
     display: flex;
     bottom: 0;
+}
+@media all and (max-width:500px){
+    .opciones{
+        margin-top: 0;
+        top: 0;
+    }
 }
