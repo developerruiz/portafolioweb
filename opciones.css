@@ -18,8 +18,6 @@ html,
 body {
   height: 100%;
   width: 100%;
-  margin: 0;
-  padding: 0;
   overflow: hidden;
 }
 a{
@@ -93,4 +91,10 @@ footer{
     text-align: center;
     display: flex;
     bottom: 0;
+}
+@media all and (max-width:500px){
+    .opciones{
+        margin-top: 0;
+        top: 0;
+    }
 }
