@@ -5,3 +5,4 @@ boton.addEventListener('click', function(){
     modalAlert.classList = ('d-none')
     modalAlert.style.transition = "all 2s ease-in";
 })
+
