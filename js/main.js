@@ -4,7 +4,6 @@ let contador = 0;
 let icono = document.querySelector('.fas.fa-bars')
 let ubicacionPrincipal  = window.pageYOffset;
 
-
 burgerMenu.addEventListener('click',function(){
     if(contador == 0 ){
         
