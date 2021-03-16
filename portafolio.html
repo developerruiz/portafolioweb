@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,6 +17,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
 </head>
 
 <body>
@@ -68,7 +71,7 @@
                             <h5 class="orange-select">Ivan Ruiz</h5>
                             <hr>
                         </div>
-                        <div class="nombre-ivan">
+                        <div class="nombre-ivan" id="titulo">
                             <h1>IVAN RUIZ</h1>
                             <h2>Front-end Developer</h2>
 
@@ -77,7 +80,7 @@
                             </div>
 
                         </div>
-                        <div class="imagen-portada">
+                        <div class="imagen-portada" id="imagen_portada">
                             <img src="images/ivanPortada.png" alt="Ivan Ruiz Front-end Developer">
                         </div>
 
@@ -277,46 +280,70 @@
         </section>
         <!-- FIN SECCION HABILIDADES -->
         <section class="aptitudes" id="aptitudes">
-            <div class="my-5">
-                <div class="titulo text-center">
-                    <h2>APTITUDES</h2>
-                </div>
-                <div class="col-lg-12 d-flex flex-wrap justify-content-around">
 
-                  <div class="cont-aptitud">
+
+            <div class="titulo text-center">
+                <h2>APTITUDES</h2>
+            </div>
+
+            <div class="cont-aptitud d-flex flex-wrap justify-content-around">
+                <div class="cont-img-txt">
+                    <div class="imagen-aptitud text-center">
+                        <i class="far fa-lightbulb"></i>
+                    </div>
+                    <div class="aptitud text-center">
+                        <h5>CREATIVIDAD</h5>
+                    </div>
+                </div>
+                <div class="cont-img-txt">
+                    <div class="imagen-aptitud text-center">
+                        <i class="far fa-handshake"></i>
+                    </div>
+                    <div class="aptitud text-center">
+                        <h5>HONESTIDAD</h5>
+                    </div>
+                </div>
+
+                <div class="cont-img-txt">
+                    <div class="imagen-aptitud text-center">
+                        <i class="far fa-lightbulb"></i>
+                    </div>
+                    <div class="aptitud text-center">
+                        <h5>PROACTIVIDAD</h5>
+                    </div>
+                </div>
+                
+                <div class="cont-img-txt">
+                    <div class="imagen-aptitud text-center">
+                        <i class="fas fa-cubes"></i>
+                    </div>
+                    <div class="aptitud text-center">
+                        <h5>DISCIPLINA</h5>
+                    </div>
+                </div>
+                <div class="cont-img-txt">
+                    <div class="imagen-aptitud text-center">
+                        <i class="fas fa-exchange-alt"></i>
+                    </div>
+                    <div class="aptitud text-center">
+                        <h5>ADAPTABILIDAD</h5>
+                    </div>
+                </div>
+
+                <div class="cont-img-txt">
+                    <div class="imagen-aptitud text-center">
+                        <i class="far fa-clock"></i>
+                    </div>
+                    <div class="aptitud text-center">
+                        <h5>GESTION DEL TIEMPO</h5>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- <div class="cont-aptitud d-flex">
                         <div
-                            class="col-lg-12 col-md-6 col-xs-3 cont-img-txt-ap m-1 d-flex align-items-center justify-content-center flex-direction-row flex-column p-5">
-                            <div class="imagen-aptitud text-center">
-                                <i class="far fa-lightbulb"></i>
-                            </div>
-                            <div class="aptitud text-center">
-                                <h5>CREATIVIDAD</h5>
-                            </div>
-                        </div>
-                        <div
-                            class=" col-lg-12 col-md-6 col-xs-3 cont-img-txt-ap m-1 d-flex align-items-center justify-content-center flex-direction-row flex-column p-5">
-                            <div class="imagen-aptitud text-center">
-                                <i class="far fa-handshake"></i>
-                            </div>
-                            <div class="aptitud text-center">
-                                <h5>HONESTIDAD</h5>
-                            </div>
-                        </div>
-                      
-                        <div
-                            class="col-lg-12 col-md-6 col-xs-3 cont-img-txt-ap m-1 d-flex align-items-center justify-content-center flex-direction-row flex-column p-5">
-                            <div class="imagen-aptitud text-center">
-                                <i class="far fa-lightbulb"></i>
-                            </div>
-                            <div class="aptitud text-center">
-                                <h5>PROACTIVIDAD</h5>
-                            </div>
-                        </div>
-                      
-                  </div>
-                  <div class="cont-aptitud">
-                        <div
-                            class="cont-img-txt-ap m-1 d-flex align-items-center justify-content-center flex-direction-row flex-column p-5">
+                            class="">
                             <div class="imagen-aptitud text-center">
                                 <i class="fas fa-cubes"></i>
                             </div>
@@ -324,9 +351,9 @@
                                 <h5>DISCIPLINA</h5>
                             </div>
                         </div>
-                      
+
                         <div
-                            class="cont-img-txt-ap m-1 d-flex align-items-center justify-content-center flex-direction-row flex-column p-5">
+                            class="">
                             <div class="imagen-aptitud text-center">
                                 <i class="fas fa-exchange-alt"></i>
                             </div>
@@ -334,79 +361,85 @@
                                 <h5>ADAPTABILIDAD</h5>
                             </div>
                         </div>
-                      
+
                         <div
-                            class="cont-img-txt-ap m-1 d-flex align-items-center justify-content-center flex-direction-row flex-column">
-                            <div class="imagen-aptitud text-center  my-3">
+                            class="">
+                            <div class="imagen-aptitud text-center">
                                 <i class="far fa-clock"></i>
                             </div>
                             <div class="aptitud text-center">
                                 <h5>GESTION DEL TIEMPO</h5>
                             </div>
                         </div>
-                  </div>
+                    </div> -->
 
-                </div>
-                <!-- MODALES -->
-                <div class="ventana-modal" id="ventana_modal">
-                    <div class="cont-modal">
-                        <div class="img-modal"></div>
-                        <div class="txt-modal">
-                            <div class="titulo-modal">
-                                <h3>Lorem ipsum dolor sit.</h3>
-                            </div>
-                            <div class="text-modal">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ducimus numquam,
-                                eveniet accusamus ut laborum, quos provident nam qui nostrum sit vitae consequuntur
-                                obcaecati itaque fugit modi, necessitatibus velit aliquid? Possimus ut sequi impedit
-                                distinctio ab obcaecati placeat laboriosam magni?
-                            </div>
+            <!-- MODALES -->
+            <div class="ventana-modal" id="ventana_modal">
+                <div class="cont-modal">
+                    <div class="img-modal"></div>
+                    <div class="txt-modal">
+                        <div class="titulo-modal">
+                            <h3>Lorem ipsum dolor sit.</h3>
+                        </div>
+                        <div class="text-modal">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ducimus numquam,
+                            eveniet accusamus ut laborum, quos provident nam qui nostrum sit vitae consequuntur
+                            obcaecati itaque fugit modi, necessitatibus velit aliquid? Possimus ut sequi impedit
+                            distinctio ab obcaecati placeat laboriosam magni?
                         </div>
                     </div>
                 </div>
+            </div>
 
-            </div> 
+
         </section>
 
     </main>
     <!-- FOOTER -->
     <footer>
-        <div class="container">
-            <div class="col-12-lg d-flex my-5">
-                <div class="col-lg-4 text-center">
-                    <div class="logo-footer my-5">
-                        <img src="" alt="logo-footer">
-                    </div>
-                    <div class="texto-footer">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ex minima cum rerum magni
-                            vero atque libero amet odit. Magnam eligendi, laudantium totam natus officiis quibusdam
-                            nostrum cum reiciendis iusto.</p>
-                    </div>
-                    <div class="redes-footer d-flex justify-content-around">
-                        <i class="fab fa-facebook"></i>
-                        <i class="fab fa-whatsapp"></i>
-                        <i class="fab fa-instagram"></i>
-                    </div>
+
+        <div class="col-lg-12 d-flex justify-content-around my-5 align-items-center">
+            <div class="cont-footer text-left p-5 col-lg-4">
+                <div class="logo-footer my-5 text-center">
+                    <img src="images/logo.png" alt="logo-footer">
                 </div>
-                <div class="col-lg-4">
-                    <div class="">
-                        <h2>Lorem ipsum dolor sit amet.</h2>
-                    </div>
-                    <div class="texto-2-footer">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi debitis voluptatum eaque
-                            suscipit sequi quod neque eos ad totam distinctio!</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi debitis voluptatum eaque
-                            suscipit sequi quod neque eos ad totam distinctio!</p>
-                    </div>
+                <div class="texto-footer">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ex minima cum rerum magni
+                        vero atque libero amet odit. Magnam eligendi, laudantium totam natus officiis quibusdam
+                        nostrum cum reiciendis iusto.</p>
                 </div>
-                <div class="col-lg-4">
-                    <h2>Lorem, ipsum dolor.</h2>
-                    <form action="contacto.php">
-                        <input type="email" name="" id="" required>
-                        <button type="submit">Enviar</button>
-                    </form>
+                <div class="redes-footer d-flex justify-content-around">
+                    <a href="https://www.facebook.com/developruiz/" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://wa.me/525517265425?text=Hola%20Ivan%20Ruiz"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/develop_ruiz/" target="_blank"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
+
+            <div class="cont-footer p-5 col-lg-4 text-left">
+                <div class="">
+                    <h2>Lorem ipsum dolor sit amet.</h2>
+                </div>
+                <div class="texto-2-footer text-left">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi debitis voluptatum eaque
+                        suscipit sequi quod neque eos ad totam distinctio!</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi debitis voluptatum eaque
+                        suscipit sequi quod neque eos ad totam distinctio!</p>
+                </div>
+            </div>
+
+
+            <div class="cont-footer text-left p-5 col-lg-4">
+                <h2>Lorem, ipsum dolor.</h2>
+                <form action="contacto.php">
+                    <input type="email" name="" id="" required>
+                    <button type="submit" class="btn btn-success">Enviar</button>
+                </form>
+            </div>
+            
+        </div>
+
+        <div class="copy col-lg-12 text-center" >
+            <p style="font-size: 16px;">Diseño y desarrollo por &copy;Ivan Ruiz </p>
         </div>
     </footer>
     <!-- FIN DE FOOTER -->
@@ -414,5 +447,7 @@
 </body>
 
 <script src="js/main.js"></script>
+<script src="js/animation.js"></script>
+
 
 </html>

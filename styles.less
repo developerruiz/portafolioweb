@@ -296,6 +296,7 @@ main {
     section {
         .perfil {
             margin-top: 250px;
+            visibility: hidden;
 
             .img-izq {
                 margin: 0 auto;
@@ -393,10 +394,13 @@ main {
                 }
             }
         }
+        .perfil.visible{
+            visibility: visible;
+        }
     }
 
     .habilidades {
-
+        visibility: hidden;
         margin-top: 230px;
 
         .titulo {
@@ -409,7 +413,7 @@ main {
 
         .contenedor-habilidades {
             .habilidad-img-txt {
-
+                // visibility: hidden;
                 .img-habilidades {
                     margin: 0 auto;
                     width: 180px;
@@ -434,6 +438,9 @@ main {
                     }
                 }
             }
+            .habilidad-img-txt.visible{
+                visibility: visible;
+            }
 
         }
 
@@ -457,33 +464,57 @@ main {
             }
         }
     }
+    .habilidades.visible{
+        visibility: visible;
+    }
 
     .aptitudes {
-        margin-top: 150px;
+        margin-top: 250px;
+        visibility: hidden;
 
-        .cont-img-txt-ap {
+        .cont-aptitud{
+            margin: 50px 0;
 
-            width: 350px;
-            height: 200px;
-            -webkit-transition: all .3s ease-in;
-            -o-transition: all .3s ease-in;
-            transition: all .3s ease-in;
+            .cont-img-txt{
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                display: flex;
+                flex-wrap: wrap;
+                // background: #e73827;
+                width: 350px;
+                height: 170px;
+                margin: 20px;
 
-            &:hover i {
-                color: @color-naranja;
-                -webkit-transition: all .3s ease-in;
-                -o-transition: all .3s ease-in;
-                transition: all .3s ease-in;
-            }
+                &:hover i, &:hover h5{
+                    color: @color-naranja;
+                    transition: all .3s ease-in;
+                        -webkit-transition: all .3s ease-in;
+                        -o-transition: all .3s ease-in;
+                }
 
-            .imagen-aptitud {
-                i {
-                    // color: @color-naranja;
-                    font-size: 28px;
+                .imagen-aptitud{
+                    i{
+                        font-size: 3rem;
+                        transition: all .3s ease-in;
+                        -webkit-transition: all .3s ease-in;
+                        -o-transition: all .3s ease-in;
+                    }
+                }
+                .aptitud{
+                    h5{
+                        margin: 18px 0;
+                        font-size: 22px;
+                        transition: all .3s ease-in;
+                        -webkit-transition: all .3s ease-in;
+                        -o-transition: all .3s ease-in;
+                    }
                 }
             }
         }
-
+        .aptitudes.visible{
+            visibility: visible;
+        }
         .ventana-modal {
             display: none;
             width: 100%;
@@ -511,7 +542,33 @@ main {
     }
 
 }
+footer{
+    
+    margin: 200px auto 0;
+    max-width: 1500px;
+    width: 100%;
 
+    .cont-footer{
+        .redes-footer{
+         a{
+            i{
+                font-size: 30px;
+                margin: 15px 0;
+                transition: all .3s ease-in;
+                -webkit-transition: all .3s ease-in;
+                -o-transition: all .3s ease-in;
+                
+                &:hover{
+                    color: @color-naranja;
+                    transition: all .3s ease-in;
+                    -webkit-transition: all .3s ease-in;
+                    -o-transition: all .3s ease-in;
+                }
+            }
+         }
+        }
+    }
+}
 //TODO:  PAGINA DE OPCIONES
 .opciones {
     z-index: 999999;
@@ -527,6 +584,7 @@ main {
                 li{
                     i{
                         font-size: 22px;
+                
                     }
                 }
             }
@@ -668,117 +726,26 @@ main {
     }
 }
 
-@keyframes parpadeo {
+@keyframes fadeUp{
     0% {
         opacity: 0;
+        transform: translatey(100%);
+        visibility: hidden;
     }
-
-
-// @keyframes parpadeo {
-//     0% {
-//         opacity: 0;
-//     }
-
-//     50% {
-//         opacity: 1;
-//     }
-
-
-//     100% {
-//         opacity: 0;
-//     }
-
+    100%{
+        opacity: 1;
+        transform: translate(0);
+        visibility: visible;
+    }
 }
 
-@keyframes desvancer {
+@keyframes fadeIn{
     0% {
         opacity: 0;
+        visibility: hidden;
     }
-
-
-// }
-
-// @keyframes desvancer {
-//     0% {
-//         opacity: 0;
-//     }
-
-//     100% {
-//         opacity: 1;
-//     }
-
-// }
-
-
-// @keyframes move_wave {
-//     0% {
-//         transform: translateX(0) translateZ(0) scaleY(1)
-//     }
-//     50% {
-//         transform: translateX(-25%) translateZ(0) scaleY(0.55)
-//     }
-//     100% {
-//         transform: translateX(-50%) translateZ(0) scaleY(1)
-//     }
-// }
-// .waveWrapper {
-//     overflow: hidden;
-//     position: absolute;
-//     left: 0;
-//     right: 0;
-//     bottom: 0;
-//     top: 0;
-//     margin: auto;
-// }
-// .waveWrapperInner {
-//     position: absolute;
-//     width: 100%;
-//     overflow: hidden;
-//     height: 100%;
-//     bottom: -1px;
-//     background-image: linear-gradient(to top, @fondo 20%, @fondo 80%);
-// }
-// .bgTop {
-//     z-index: 15;
-//     opacity: 0.5;
-// }
-// .bgMiddle {
-//     z-index: 10;
-//     opacity: 0.75;
-// }
-// .bgBottom {
-//     z-index: 5;
-// }
-// .wave {
-//     position: absolute;
-//     left: 0;
-//     width: 200%;
-//     height: 100%;
-//     background-repeat: repeat no-repeat;
-//     background-position: 0 bottom;
-//     transform-origin: center bottom;
-// }
-// .waveTop {
-//     background-size: 50% 100px;
-// }
-// .waveAnimation .waveTop {
-//   animation: move-wave 3s;
-//    -webkit-animation: move-wave 3s;
-//    -webkit-animation-delay: 1s;
-//    animation-delay: 1s;
-// }
-// .waveMiddle {
-//     background-size: 50% 120px;
-// }
-// .waveAnimation .waveMiddle {
-//     animation: move_wave 10s linear infinite;
-// }
-// .waveBottom {
-//     background-size: 50% 100px;
-// }
-// .waveAnimation .waveBottom {
-//     animation: move_wave 15s linear infinite;
-// }
+    100%{
+        opacity: 1;
+        visibility: visible;
+    }
 }
-
-
