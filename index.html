@@ -22,44 +22,36 @@
 
 <body>
 
-    <!-- <div class="ventana-modal" id="centana_modal">
+    <div class="ventana-modal" id="centana_modal">
         <div class="container-modal">
             <div class="cont-img-modal">
             </div>
             <div class="cont-input-contacto">
-                <h3>Contacto</h3>
-                <form action="enviarmensae.php">
-
-                    <input type="email" name="" id="" placeholder="Correo electronico">
-                    <textarea name="" id="" cols="20" rows="5" placeholder="Mensaje..."></textarea>
-
-                    <button type="submit">Enviar mensaje</button>
-
-                    <div class="redes-ventanamodal">
-                        <ul class="list-unstyled d-flex justify-content-around">
-                            <li>
-                                <a href="https://www.facebook.com/developruiz/" target="_blank"><i
-                                        class="fab fa-facebook"></i></a>
-                            </li>
-                            <li>
-                                <a href="https://wa.me/525517265425?text=Hola%20Ivan%20Ruiz">
-                                    <i class="fab fa-whatsapp"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.instagram.com/develop_ruiz/" target="_blank"><i
-                                        class="fab fa-instagram"></i></a>
-                            </li>
-                        </ul>
+                <form action="correos.php" method="POST" class="formulario">
+                    <div class="form my-4">
+                        <h1 style="font-size: 26px; font-weight: 600;">Contacto</h1>
+                        <div class="grupo">
+                            <input type="text" name="nombre" id="" required><span class="barra"></span>
+                            <label>Nombre</label>
+                        </div>
+                        <div class="grupo">
+                            <input type="email" name="email" id="" required><span class="barra"></span>
+                            <label>Email</label>
+                        </div>
+                        <div class="grupo">
+                            <textarea name="mensaje" id="" rows="3" required></textarea><span class="barra"></span>
+                            <label>Mensaje</label>
+                        </div>
+                        <button type="submit">Enviar</button>
                     </div>
                 </form>
             </div>
         </div>
-    </div> -->
+    </div>
 
 
     <div id="particle-canvas">
-        
+
         <div class="opciones align-items-center d-flex justify-content-center">
             <div class="contenedor-opciones p-3 text-center">
                 <div class="img-perfil">
