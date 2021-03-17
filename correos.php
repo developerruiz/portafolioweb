@@ -10,7 +10,7 @@ $email = $_POST['email'];
 $header = "Portafolio";
 $mensajeCompleto = $mensaje . "\nAtentamente: " . $nombre . "\nEmail: " . $email;
 
-mail($destinatario, $mensajeCompleto, $header);
+mail($destinatario, $mensajeCompleto, $header );
 echo "<script>alert('correo enviado exitosamente')</script>";
 
 ?>
