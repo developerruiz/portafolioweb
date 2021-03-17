@@ -14,44 +14,32 @@
         integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
         crossorigin="anonymous" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="css/ventanamodal.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap"
         rel="stylesheet">
 </head>
 
+
 <body>
 
-    <body>
-        <div id="particle-canvas">
-            <div class="opciones align-items-center d-flex justify-content-center">
-                <div class="contenedor-opciones p-3 text-center">
-                    <div class="img-perfil">
-                        <img src="images/yofotoperfil.jpg" alt="" width="180">
-                    </div>
-                    <div class="texto-opciones">
-                        <h1>Ivan Ruiz Front-end</h1>
-                        <h2 style="font-size: 2.5rem;">Developer</h2>
-                    </div>
-                    <div class="btn-opciones">
-                        <ul class="list-unstyled">
-                            <li>
-                                <a href="portafolio.html">
-                                    <button class="btn btn-success col-10 my-3 p-3">Portafolio</button>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://github.com/developerruiz" target="_blank">
-                                    <button class="btn btn-success col-10 my-3 p-3">Github</button></li>
-                            </a>
-                            <li>
-                                <a href="https://app.netlify.com/teams/developerruiz/" target="_blank">
-                                    <button class="btn btn-success col-10 my-3 p-3">Netlify</button></li>
-                            </a>
-                        </ul>
-                    </div>
-                    <div class="redes-sociales text-center">
+    <!-- <div class="ventana-modal" id="centana_modal">
+        <div class="container-modal">
+            <div class="cont-img-modal">
+            </div>
+            <div class="cont-input-contacto">
+                <h3>Contacto</h3>
+                <form action="enviarmensae.php">
+
+                    <input type="email" name="" id="" placeholder="Correo electronico">
+                    <textarea name="" id="" cols="20" rows="5" placeholder="Mensaje..."></textarea>
+
+                    <button type="submit">Enviar mensaje</button>
+
+                    <div class="redes-ventanamodal">
                         <ul class="list-unstyled d-flex justify-content-around">
                             <li>
-                                <a href="https://www.facebook.com/developruiz/" target="_blank"><i class="fab fa-facebook"></i></a>
+                                <a href="https://www.facebook.com/developruiz/" target="_blank"><i
+                                        class="fab fa-facebook"></i></a>
                             </li>
                             <li>
                                 <a href="https://wa.me/525517265425?text=Hola%20Ivan%20Ruiz">
@@ -59,21 +47,73 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="https://www.instagram.com/develop_ruiz/" target="_blank"><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.instagram.com/develop_ruiz/" target="_blank"><i
+                                        class="fab fa-instagram"></i></a>
                             </li>
                         </ul>
                     </div>
+                </form>
+            </div>
+        </div>
+    </div> -->
+
+
+    <div id="particle-canvas">
+        
+        <div class="opciones align-items-center d-flex justify-content-center">
+            <div class="contenedor-opciones p-3 text-center">
+                <div class="img-perfil">
+                    <img src="images/yofotoperfil.jpg" alt="" width="150">
+                </div>
+                <div class="texto-opciones">
+                    <h1 style="font-size: 2rem;">Ivan Ruiz Front-end</h1>
+                    <h2 style="font-size: 2rem;">Developer</h2>
+                </div>
+                <div class="btn-opciones">
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="portafolio.html">
+                                <button class="btn btn-success col-12 my-3 p-3">Portafolio</button>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/developerruiz" target="_blank">
+                                <button class="btn btn-success col-12 my-3 p-3">Github</button></li>
+                        </a>
+                        <li>
+                            <a href="https://app.netlify.com/teams/developerruiz/" target="_blank">
+                                <button class="btn btn-success col-12 my-3 p-3">Netlify</button></li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="redes-sociales text-center">
+                    <ul class="list-unstyled d-flex justify-content-around">
+                        <li>
+                            <a href="https://www.facebook.com/developruiz/" target="_blank"><i
+                                    class="fab fa-facebook"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://wa.me/525517265425?text=Hola%20Ivan%20Ruiz">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/develop_ruiz/" target="_blank"><i
+                                    class="fab fa-instagram"></i></a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-
-
         </div>
-        <footer>
-            <p>Diseño y desarrollo por &copy;Ivan Ruiz 2021</p>
-        </footer>
-    </body>
 
 
-    <script src="js/particle.js"></script>
+    </div>
+    <footer>
+        <p>Diseño y desarrollo por &copy;Ivan Ruiz 2021</p>
+    </footer>
+</body>
+
+
+<script src="js/particle.js"></script>
 
 </html>
