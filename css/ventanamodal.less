@@ -1,63 +1,196 @@
+@blanco : #fff;
+@naranja: rgb(255, 81, 55);
+
 .ventana-modal {
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, .86);
+    background: fade(#121212,70);
     position: absolute;
     z-index: 9999999;
 
     .container-modal {
         display: flex;
         position: absolute;
-        width: 60%;
-        height: 60%;
+        width: 800px;
+        height: 500px;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        background: #dfdfdf;
-        border-radius: 45px;
+        border-radius: 25px;
         align-items: center;
 
         .cont-img-modal {
-            width: 45%;
+            width: 50%;
             height: 95%;
-            margin-left: auto;
-            background-image: url(../images/img-ventanamodal.jpg);
-            border-radius: 45px 0 0 45px;
+
+            background-image: url(../images/imagen-contacto.gif);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        box-shadow: 0 0 6px 0 rgba(255, 81, 55, 0.8);
+
+            // border-radius: 15px 0 0 15px;
         }
 
         .cont-input-contacto {
             width: 50%;
             height: 100%;
+            margin: 0 auto;
             text-align: center;
+            background: @blanco;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.8);
 
-            h3 {
-                font-size: 2rem;
-                margin: 25px 0;
+
+            h1{
+                color: @naranja;
             }
-
             form {
-                text-align: center;
-                display: flex;
-                flex-direction: column;
-
-                input[type="email"] {
-                    width: 70%;
-                    height: 30px;
-                    border-radius: 5px;
-                    border: 1px solid rgb(233, 233, 233);
-
-                }
-
-                textarea {
-                    width: 70%;
-                    height: 100px;
-                    border-radius: 5px;
-                    border: 1px solid rgb(233, 233, 233);
-                }
+                background: #fff;
+                width: 100%;
+                // border-radius: 10px;
+                // box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.8);
             }
+            .form {
+                width: 100%;
+                margin: auto;
+            }
+        
+            form .grupo {
+                position: relative;
+                margin: 30px;
+            }
+        
+            input,
+            textarea {
+                background: #f2f2f2;
+                border-radius: 5px;
+                color: @naranja ;
+                font-size: 18px;
+                padding: 10px 10px 10px 5px;
+                display: block;
+                width: 100%;
+                height: 30px;
+                border: none;
+                resize: none;
+            }
+            textarea{
+                height: 75px;
+            }
+         
+        
+            input:focus,
+            textarea:focus {
+                outline: none;
+                color: @naranja ;
+            }
+            input:focus~label,
+            input:valid~label,
+            textarea:focus~label,
+            textarea:valid~label {
+                position: absolute;
+                top: -18px;
+                font-size: 12px;
+                color: @naranja ;
+            }
+        
+            label {
+                color: #121212;
+                font-size: 16px;
+                position: absolute;
+                left: 5px;
+                top: 10px;
+                transition: 0.5s ease all;
+                pointer-events: none;
+            }
+        
+        
+            input:focus~.barra::before,
+            textarea:focus~.barra::before {
+                width: 100%;
+            }
+        
+            .barra {
+                position: relative;
+                display: block;
+                width: 100%;
+            }
+        
+            .barra::before {
+                content: '';
+                height: 2px;
+                width: 0%;
+                bottom: 0;
+                position: absolute;
+                background: @naranja;
+                transition: 0.3s ease all;
+                left: 0%;
+            }
+        
+            button {
+                background: @naranja ;
+                display: block;
+                width: 100px;
+                height: 40px;
+                border: none;
+                color: #fff;
+                border-radius: 4px;
+                font-size: 16px;
+                margin: 10px auto;
+                cursor: pointer;
+            }
+
         }
 
     }
 
 
 }
+@media all and (max-width:945px){
+    .ventana-modal .container-modal{
+        width: 550px!important;
+        height: 550px;
+        margin: 0 auto!important;
+    }
+}
+@media all and (max-width:768px){
+    .ventana-modal .container-modal{
+        width: 100%!important;
+    }
+    .container-modal{
+        display: block!important;
+        height: auto!important;
+    }
+    .ventana-modal .container-modal .cont-img-modal{
+        width: 80%!important;
+        height: 60px!important;
+        margin: 0 auto!important;
+        // border-radius: 10px 10px 0 0!important;
+    }
+    .ventana-modal .container-modal .cont-input-contacto{
+        width: 80%!important;
+    }
+
+}
+// @media all and (max-width:657px){
+//     .container-modal{
+
+//         width: 600px;
+//         background: #ff5137;
+//     }
+//     .ventana-modal .container-modal .cont-img-modal{
+//         height: 10%;
+//         margin: 0 auto;
+//     }
+//     .ventana-modal .container-modal{
+//         display: flex;
+//         flex-direction: column;
+//         align-items: center;
+//         width: 100%;
+        
+//     }
+//     .ventana-modal .container-modal .cont-input-contacto{
+//         height: 400px;
+//     }
+// }
