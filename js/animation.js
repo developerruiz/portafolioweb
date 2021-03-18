@@ -6,9 +6,11 @@ window.addEventListener('scroll', function () {
     let habilidades = document.getElementById('habilidades');
     let posicionObj2 = habilidades.getBoundingClientRect().top;
 
-    let iconoHabilidad = document.getElementById('aptitudes')
+    let iconoHabilidad = document.getElementById('aptitudes');
     let posicionObj3 = iconoHabilidad.getBoundingClientRect().top;
     
+    let posicionFooter = document.getElementById('footer');
+    let posicionObj4 = posicionFooter.getBoundingClientRect().top;
 
     let tamañoPantalla = window.innerHeight / 2;
 
@@ -33,6 +35,10 @@ window.addEventListener('scroll', function () {
         seccionAptitud.classList = ('aptitudes visible')
         
     }
+    if (posicionObj4< tamañoPantalla) {
+        posicionFooter.style.animation = 'fadeUp .5s ease-out'
+        posicionFooter.style.visibility = 'visible'
+    }
 
 })
 
@@ -55,9 +61,10 @@ gsap.set('#titulo', {
 });
 // TO
 gsap.to('#titulo', {
-    duration: 1.5,
+    duration: 2.5,
     y: 0,
     opacity: 1,
+    ease: 'elastic',
 });
 
 
