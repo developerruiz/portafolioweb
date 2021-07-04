@@ -1,7 +1,7 @@
 let burgerMenu = document.getElementById('burger_menu');
 let menuMovil = document.getElementById('menu_movil');
-let contador = 0;
 let icono = document.querySelector('.fas.fa-bars')
+let contador = 0;
 let ubicacionPrincipal  = window.pageYOffset;
 
 burgerMenu.addEventListener('click',function(){

@@ -6,12 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Front-end Developer Ivan Ruiz</title>
-    
+
     <!-- BOOTSTRAP -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
         integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
         crossorigin="anonymous" />
@@ -19,7 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap"
         rel="stylesheet">
 
-        <!-- FONTAWESOME -->
+    <!-- FONTAWESOME -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
 
@@ -31,11 +31,8 @@
 <body>
 
 
-    
-    <main>    
-        
-        <!-- modal-contacto -->
-        <div class="ventana-modal" id="ventana_modal">
+    <!-- modal-contacto -->
+    <div class="ventana-modal" id="ventana_modal">
 
 
         <div class="container-modal">
@@ -45,8 +42,8 @@
             <div class="cont-img-modal">
             </div>
             <div class="cont-input-contacto">
-                
-      
+
+
 
                 <form action="correos.php" method="POST" class="formulario">
                     <div class="form my-4">
@@ -69,6 +66,9 @@
             </div>
         </div>
     </div>
+
+    <main>
+
         <!-- INICIO DE MENU -->
 
         <nav class="d-flex align-items-center my-4" id="main-menu">
@@ -77,9 +77,10 @@
             </div>
             <div class="menu">
                 <li class="active"><a href="index.html">INICIO</a></li>
-                <li><a href="#">HABILIDADES</a></li>
-                <li><a href="#">APTITUDES</a></li>
-                <li><a href="#">CONTACTO</a></li>
+                <li><a href="#" class="inactivo-temporal">TRABAJOS</a></li>
+                <li><a href="#" class="inactivo-temporal">POST</a></li>
+                <li><a href="#" class="inactivo-temporal">GALLERÍA</a></li>
+                <li class="boton"><a href="#" class="boton-contacto">CONTACTO</a></li>
             </div>
             <div class="burger-menu" id="burger_menu">
                 <a href="#menu-movil">
@@ -94,9 +95,11 @@
         <!-- MENU MOVIL -->
         <div class="menu-movil" id="menu_movil">
             <li class="active"><a href="index.html">INICIO</a></li>
-            <li><a href="#">HABILIDADES</a></li>
-            <li><a href="#">APTITUDES</a></li>
-            <li><a href="#">CONTACTO</a></li>
+            <li><a href="#" class="inactivo-temporal">TRABAJOS</a></li>
+            <li><a href="#" class="inactivo-temporal">POST</a></li>
+            <li><a href="#" class="inactivo-temporal">GALLERÍA</a></li>
+            <li class="boton"><a href="#" class="boton-contacto">CONTACTO</a></li>
+
         </div>
         <!-- FIN MENU MOVIL -->
 
@@ -108,9 +111,14 @@
                     <div class="count-portada">
                         <div class="nombre-izq">
                             <div class="redes-izq">
-                                <a href="#"><i class="fab fa-facebook"></i></a>
-                                <a href="#"><i class="fab fa-whatsapp"></i></a>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.facebook.com/developruiz" target="_blank"><i
+                                        class="fab fa-facebook"></i></a>
+                                <a href="https://www.instagram.com/develop_ruiz/" target="_blank"><i
+                                        class="fab fa-instagram"></i></a>
+                                <a href="https://twitter.com/IvanRuizR95" target="_blank"><i
+                                        class="fab fa-twitter"></i></a>
+                                <a href="https://wa.me/525517265425?text=Hola%20Ivan%20Ruiz"><i
+                                        class="fab fa-whatsapp"></i></a>
                                 <!-- <i class="fab fa-linkedin"></i> -->
                             </div>
                             <hr>
@@ -161,19 +169,26 @@
                         <div class="titulo my-3">
                             <h2>Perfil</h2>
                         </div>
-                        <p>Front-end Developer Jr con 2 años de experiencia en desarrollo web responsivas con uso de
-                            HTML, CSS y JavaScript con pre-prosesador LESS para la optimización de tiempo, consumo de
-                            API´s. Mantenimiento y creación de páginas web en Wordpress, css adicionales, instalación de
+                        <p>Front-end Developer Jr con 2 años 5 meses de experiencia en desarrollo y aplicaciones web
+                            responsivas con uso de
+                            HTML, CSS y JavaScript, pre-prosesador LESS o SASS para la optimización de
+                            tiempo,conocimeitnos y practicas en
+                            nuevas tecnologias de desarrollo como librería React Js, React Native para la creacion de
+                            aplicaciones moviles nativas.
+                            consumo y maniulacion de datos con seudo-bases en JSON o consumo de datos en API´s.
+                            Conexiones a bases de no relacionales con Firebase o alojamiento de sitios y proyectos en
+                            React. Mantenimiento y creación de páginas web en Wordpress, css adicionales, instalación de
                             plugis, bases de datos, backups, Ecommerce. Fundamentos en diseño UX/UI y control de
-                            versiones en GitHub. Conocimientos en Framework Bootstrap4, diseño y presentación de mockups
+                            versiones con uso de git y alojamiento en GitHub y presentacion de proyectos en demo con
+                            Netlify. uso en Framework de CSS Bootstrap4, diseño y presentación de mockups
                             o contenido digital con herramientas Adobe illustrator, Adobe Photoshop, AdobeXD y
                             conocimientos adicionales en SQL Server Management Studio, MySQL para el manejo y creación
-                            de bases de datos o seudo-bases en JSON</p>
+                            de bases de datos en PHP 7.7</p>
 
                         <div class="elipse-debajo">
                             <img src="images/elipse-abajo-perfil.png" alt="">
                         </div>
-                        <div class="L-debajo">
+                        <div class="L-debajo my-5">
                             <img src="images/L-perfil-abajo.png" alt="">
                         </div>
                     </div>
@@ -196,36 +211,34 @@
 
 
                     <div class="contenedor-habilidades d-flex flex-wrap my-5">
-                        <div class="habilidad-img-txt col-lg-3 col-md-6">
-                            <div class="img-habilidades d-flex justify-content-center">
-                                <img src="images/imagen_html5.png" alt="" width="60%">
-                            </div>
-                            <h2 class="text-center my-4">HTML5</h2>
-                            <p class="texto-habilidad text-justify">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum soluta debitis
-                                aliquam
-                                obcaecati, dolores eos adipisci culpa voluptatem quia laborum, minus hic rerum
-                                distinctio porro commodi ad optio tempore illo corrupti officia repudiandae.
-                                Possimus
-                                perspiciatis tenetur odit praesentium nobis commodi eaque sapiente minima!
-                                Asperiores,
-                                unde maiores. Ad consectetur quasi aliquid.
-                            </p>
-                        </div>
+
                         <div class="habilidad-img-txt col-lg-3 col-md-6">
                             <div class="img-habilidades d-flex justify-content-center">
                                 <img src="images/cssicon.png" alt="" width="60%">
                             </div>
                             <h2 class="text-center my-4">CSS3</h2>
                             <p class="texto-habilidad text-justify">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum soluta debitis
-                                aliquam
-                                obcaecati, dolores eos adipisci culpa voluptatem quia laborum, minus hic rerum
-                                distinctio porro commodi ad optio tempore illo corrupti officia repudiandae.
-                                Possimus
-                                perspiciatis tenetur odit praesentium nobis commodi eaque sapiente minima!
-                                Asperiores,
-                                unde maiores. Ad consectetur quasi aliquid.
+                                Con su última versión CSS3 para darle un aspecto único a cada sitio o elemento con ayuda
+                                de
+                                animación con Keyframes, y adaptar la representación del contenido a características del
+                                dispositivo con @mediaquery. Escribiendo codigo css con ayuda de un pre-prosesador
+                                (LESS, SASS)
+                                para la optimización de tiempo y entrega de proyectos junto con las extensiones de
+                                Visual Studio Code
+                                usando Live Server para validar los cambios en tempo real y SimpLESS para compilarlo a
+                                su archivo CSS.
+                            </p>
+                        </div>
+                        <div class="habilidad-img-txt col-lg-3 col-md-6">
+                            <div class="img-habilidades d-flex justify-content-center">
+                                <img src="images/imagen_html5.png" alt="" width="60%">
+                            </div>
+                            <h2 class="text-center my-4">HTML5</h2>
+                            <p class="texto-habilidad text-justify">
+                                Definir la estructura del contenido con sus elementos correspondientes acuerdo al
+                                proyecto que se estará maquetando, videos, imágenes, iframes, secciones etc. con sus Id
+                                adecuados para cada sección o elemento especifico y clases generales para optimizar la
+                                escritura de cada elemento.
                             </p>
                         </div>
                         <div class="habilidad-img-txt col-lg-3 col-md-6">
@@ -234,30 +247,27 @@
                             </div>
                             <h2 class="text-center my-4">JavaScript</h2>
                             <p class="texto-habilidad text-justify">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum soluta debitis
-                                aliquam
-                                obcaecati, dolores eos adipisci culpa voluptatem quia laborum, minus hic rerum
-                                distinctio porro commodi ad optio tempore illo corrupti officia repudiandae.
-                                Possimus
-                                perspiciatis tenetur odit praesentium nobis commodi eaque sapiente minima!
-                                Asperiores,
-                                unde maiores. Ad consectetur quasi aliquid.
+                                Usándolo para poder crear elementos dinámicos y lograr minimizar el contenido de HTML en
+                                el índex o en el archivo especifico, reduciendo el código HTML y quitando más eventos de
+                                copiar y pegar. programar funciones, variables, objetos, condicionales para hacer más
+                                fácil el uso del sitio web para el usuario ya sea para validación de formularios o
+                                movimientos y animaciones, apoyándome con el uso de la librería GSAP para el movimiento
+                                de los elementos dentro de una clase o un id.
                             </p>
                         </div>
                         <div class="habilidad-img-txt col-lg-3 col-md-6">
                             <div class="img-habilidades d-flex justify-content-center">
-                                <img src="images/bootsicon.png" alt="" width="60%">
+                                <img src="images/giticono.png" alt="" width="60%">
                             </div>
-                            <h2 class="text-center my-4">Bootstrap4</h2>
+                            <h2 class="text-center my-4">Git</h2>
+
                             <p class="texto-habilidad text-justify">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum soluta debitis
-                                aliquam
-                                obcaecati, dolores eos adipisci culpa voluptatem quia laborum, minus hic rerum
-                                distinctio porro commodi ad optio tempore illo corrupti officia repudiandae.
-                                Possimus
-                                perspiciatis tenetur odit praesentium nobis commodi eaque sapiente minima!
-                                Asperiores,
-                                unde maiores. Ad consectetur quasi aliquid.
+                                Llevando un control de versiones para cada proyecto y poder "commitear" los cambios
+                                realizados verificando los cambios hechos y las pruebas en distintas versiones para cada
+                                nuevo elemento que se creara en conjunto con otros desarrolladores o solo. teniendo un
+                                control de los cambios para al final llevar los cambios a su versión Master y aplicar un
+                                push y un merge y lograr publicar la versión final. haciendo prueba en una demo
+                                conectando GitHub con Netlify o Firebase.
                             </p>
                         </div>
 
@@ -268,7 +278,7 @@
                         <div class="habilidad col-lg-12 d-flex">
                             <div class="cont-izq col-lg-6 d-flex">
                                 <div class="linea-punteada"></div>
-                                <p>Git</p>
+                                <p>Github</p>
 
                             </div>
                             <div class="cont-der col-lg-6 d-flex">
@@ -335,18 +345,18 @@
             <div class="cont-aptitud d-flex flex-wrap justify-content-around">
                 <div class="cont-img-txt">
                     <div class="imagen-aptitud text-center">
-                        <i class="far fa-lightbulb"></i>
+                        <i class="fas fa-users"></i></fas>
                     </div>
                     <div class="aptitud text-center">
-                        <h5>CREATIVIDAD</h5>
+                        <h5>TRABAJO EN EQUIPO</h5>
                     </div>
                 </div>
                 <div class="cont-img-txt">
                     <div class="imagen-aptitud text-center">
-                        <i class="far fa-handshake"></i>
+                        <i class="fas fa-spell-check"></i>
                     </div>
                     <div class="aptitud text-center">
-                        <h5>HONESTIDAD</h5>
+                        <h5>SOLUCIÓN DE PROBLEMAS</h5>
                     </div>
                 </div>
 
@@ -358,7 +368,7 @@
                         <h5>PROACTIVIDAD</h5>
                     </div>
                 </div>
-                
+
                 <div class="cont-img-txt">
                     <div class="imagen-aptitud text-center">
                         <i class="fas fa-cubes"></i>
@@ -420,73 +430,66 @@
                     </div> -->
 
             <!-- MODALES -->
-            <div class="ventana-modal" id="ventana_modal">
-                <div class="cont-modal">
-                    <div class="img-modal"></div>
-                    <div class="txt-modal">
-                        <div class="titulo-modal">
-                            <h3>Lorem ipsum dolor sit.</h3>
-                        </div>
-                        <div class="text-modal">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ducimus numquam,
-                            eveniet accusamus ut laborum, quos provident nam qui nostrum sit vitae consequuntur
-                            obcaecati itaque fugit modi, necessitatibus velit aliquid? Possimus ut sequi impedit
-                            distinctio ab obcaecati placeat laboriosam magni?
-                        </div>
-                    </div>
-                </div>
-            </div>
-
 
         </section>
 
     </main>
     <!-- FOOTER -->
     <footer id="footer">
-
         <div class="col-12 d-flex flex-wrap justify-content-around my-5 align-items-center text-center">
             <div class="cont-footer text-left p-5 col-lg-4">
-                <div class="logo-footer my-5 text-center">
+                <div class="logo-footer my-5 text-left">
                     <img src="images/logo.png" alt="logo-footer">
                 </div>
                 <div class="texto-footer">
-                    <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ex minima cum rerum magni
-                        vero atque libero amet odit. Magnam eligendi, laudantium totam natus officiis quibusdam
-                        nostrum cum reiciendis iusto.</p>
+                    <p class="text-justify">Desarrollador de sitios y aplicaciones web con fundamentos en diseño UX / UI
+                        para la mejora de la interacción y la navegación para el usuario final con uso de nuevas
+                        herramientas y adaptable para todos los dispositivos. </p>
                 </div>
-                <div class="redes-footer d-flex justify-content-around">
-                    <a href="https://www.facebook.com/developruiz/" target="_blank"><i class="fab fa-facebook"></i></a>
-                    <a href="https://wa.me/525517265425?text=Hola%20Ivan%20Ruiz"><i class="fab fa-whatsapp"></i></a>
-                    <a href="https://www.instagram.com/develop_ruiz/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <div class="redes-footer d-flex">
+                    <!-- <a href="https://www.facebook.com/developruiz" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/develop_ruiz/" target="_blank"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com/IvanRuizR95" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://wa.me/525517265425?text=Hola%20Ivan%20Ruiz"><i class="fab fa-whatsapp"></i></a> -->
                 </div>
             </div>
-
             <div class="col-md-6 cont-footer p-5 col-lg-4 text-left">
-                <div class="">
-                    <h2>Lorem ipsum dolor sit amet.</h2>
+                <div class="menu-footer">
+                    <h2>Menú</h2>
                 </div>
                 <div class="texto-2-footer text-left">
-                    <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi debitis voluptatum eaque
-                        suscipit sequi quod neque eos ad totam distinctio!</p>
-                    <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi debitis voluptatum eaque
-                        suscipit sequi quod neque eos ad totam distinctio!</p>
+                    <li><a href="#">Trabajos</a></li>
+                    <li><a href="#">Diseños</a></li>
+                    <li><a href="#">Post</a></li>
+                    <li><a href="#">Galería</a></li>
+
                 </div>
             </div>
 
 
             <div class="col-lg-4 col-md-6 cont-footer text-left p-5">
-                <h2>Lorem, ipsum dolor.</h2>
+                <h2>Contacto</h2>
                 <div class="boton my-5">
                     <a href="#" class="boton-contacto" id="boton_contacto">Contacto</a>
                 </div>
+                <div class="redes-footer d-flex">
+                    <a href="https://www.facebook.com/developruiz" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/develop_ruiz/" target="_blank"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com/IvanRuizR95" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://wa.me/525517265425?text=Hola%20Ivan%20Ruiz"><i class="fab fa-whatsapp"></i></a>
+                </div>
             </div>
-            
+
+
         </div>
 
-        <div class="copy col-lg-12 text-center" >
-            <p style="font-size: 12px;  letter-spacing: 1px;">Diseño y desarrollo por &copy;Ivan Ruiz </p>
+        <div class="copy col-lg-12 text-center">
+            <p style="font-size: 12px;  letter-spacing: 1px;">&copy;DevelopRuiz diseño y desarrollo 2021</p>
         </div>
     </footer>
+
     <!-- FIN DE FOOTER -->
 
 </body>
